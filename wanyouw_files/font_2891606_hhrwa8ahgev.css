@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "io"; /* Project id 2891606 */
+  /* Color fonts */
+  src: url("font_2891606_hhrwa8ahgev.woff2") format("woff2"),
+    url("font_2891606_hhrwa8ahgev.woff") format("woff"),
+    url("font_2891606_hhrwa8ahgev.ttf") format("truetype");
+}
+
+.io {
+  font-family: "io" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.io-002-artist:before {
+  content: "\e700";
+}
+
+.io-001-surprise:before {
+  content: "\e701";
+}
+
+.io-003-santa-claus:before {
+  content: "\e702";
+}
+
+.io-004-warm:before {
+  content: "\e703";
+}
+
+.io-005-costume:before {
+  content: "\e704";
+}
+
+.io-006-drink:before {
+  content: "\e705";
+}
+
+.io-007-music:before {
+  content: "\e706";
+}
+
+.io-011-drunk:before {
+  content: "\e707";
+}
+
+.io-012-fear:before {
+  content: "\e708";
+}
+
+.io-016-embarrassed:before {
+  content: "\e709";
+}
+
+.io-018-drawing:before {
+  content: "\e70a";
+}
+
+.io-019-cool:before {
+  content: "\e70b";
+}
+
+.io-020-swim:before {
+  content: "\e70c";
+}
+
+.io-022-beauty-1:before {
+  content: "\e70d";
+}
+
+.io-024-phone-call:before {
+  content: "\e70e";
+}
+
+.io-033-eat:before {
+  content: "\e70f";
+}
+
+.io-031-kiss:before {
+  content: "\e710";
+}
+
+.io-015-beauty-2:before {
+  content: "\e711";
+}
+
+.io-028-painter:before {
+  content: "\e712";
+}
+
+.io-036-sick:before {
+  content: "\e713";
+}
+
+.io-029-boxing:before {
+  content: "\e714";
+}
+
+.io-026-dancing:before {
+  content: "\e715";
+}
+
+.io-040-birthday:before {
+  content: "\e716";
+}
+
+.io-049-happy:before {
+  content: "\e717";
+}
+
+.io-034-devil:before {
+  content: "\e718";
+}
+
+.io-027-sing:before {
+  content: "\e719";
+}
+
+.io-030-scientist:before {
+  content: "\e71a";
+}
+
+.io-039-dizzy:before {
+  content: "\e71b";
+}
+
+.io-048-exercise:before {
+  content: "\e71c";
+}
+
+.io-044-worker:before {
+  content: "\e71d";
+}
+
+.io-032-beauty:before {
+  content: "\e71e";
+}
+
+.io-045-sleep:before {
+  content: "\e71f";
+}
+
+.io-050-angry:before {
+  content: "\e720";
+}
+
+.io-043-laughing:before {
+  content: "\e721";
+}

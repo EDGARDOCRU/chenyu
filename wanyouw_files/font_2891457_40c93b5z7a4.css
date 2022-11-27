@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "io"; /* Project id 2891457 */
+  /* Color fonts */
+  src: url("font_2891457_40c93b5z7a4.woff2") format("woff2"),
+    url("font_2891457_40c93b5z7a4.woff") format("woff"),
+    url("font_2891457_40c93b5z7a4.ttf") format("truetype");
+}
+
+.io {
+  font-family: "io" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.io-a-EarlyAccess:before {
+  content: "\e969";
+}
+
+.io-a-CaptureTheFlag:before {
+  content: "\e96a";
+}
+
+.io-Compass:before {
+  content: "\e96b";
+}
+
+.io-Flagship:before {
+  content: "\e96c";
+}
+
+.io-Distribution:before {
+  content: "\e96d";
+}
+
+.io-a-ActionGame:before {
+  content: "\e96e";
+}
+
+.io-a-CreateVisuals:before {
+  content: "\e96f";
+}
+
+.io-a-DiceRoll:before {
+  content: "\e970";
+}
+
+.io-a-AdventureGame:before {
+  content: "\e971";
+}
+
+.io-Character:before {
+  content: "\e972";
+}
+
+.io-Boss:before {
+  content: "\e973";
+}
+
+.io-Potion:before {
+  content: "\e974";
+}
+
+.io-a-KingCrown:before {
+  content: "\e975";
+}
+
+.io-a-HeartRate:before {
+  content: "\e976";
+}
+
+.io-a-KidsGame:before {
+  content: "\e977";
+}
+
+.io-a-LevelDesign:before {
+  content: "\e978";
+}
+
+.io-a-KeyboardMaping:before {
+  content: "\e979";
+}
+
+.io-a-MobileGame:before {
+  content: "\e97a";
+}
+
+.io-Monster:before {
+  content: "\e97b";
+}
+
+.io-a-ShootingGame:before {
+  content: "\e97c";
+}
+
+.io-Trophy:before {
+  content: "\e97d";
+}
+
+.io-a-VisualEffects:before {
+  content: "\e97e";
+}
+
+.io-a-ManaPotion:before {
+  content: "\e97f";
+}
+
+.io-a-GamePublishing:before {
+  content: "\e980";
+}
+
+.io-a-GameDeveloper:before {
+  content: "\e981";
+}
+
+.io-a-OnlineDistribution:before {
+  content: "\e982";
+}
+
+.io-Racing:before {
+  content: "\e983";
+}
+
+.io-a-HeartsLife:before {
+  content: "\e984";
+}
+
+.io-a-GameController:before {
+  content: "\e985";
+}
+
+.io-Leader:before {
+  content: "\e986";
+}
+
+.io-a-StrategyGame:before {
+  content: "\e987";
+}
+
+.io-a-SpaceMission:before {
+  content: "\e988";
+}
+
+.io-a-SoundEffects:before {
+  content: "\e989";
+}
+
+.io-Sprite:before {
+  content: "\e98a";
+}
+
+.io-a-SimulationGame:before {
+  content: "\e98b";
+}
+
+.io-a-SpaceHelmet:before {
+  content: "\e98c";
+}
+
+.io-a-InternetGame:before {
+  content: "\e98d";
+}
+
+.io-Support:before {
+  content: "\e98e";
+}
+
+.io-a-TestingGame:before {
+  content: "\e98f";
+}
+
+.io-a-SportsGame:before {
+  content: "\e990";
+}

@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "io"; /* Project id 2891599 */
+  /* Color fonts */
+  src: url("font_2891599_v8fi4uz7qt9.woff2") format("woff2"),
+    url("font_2891599_v8fi4uz7qt9.woff") format("woff"),
+    url("font_2891599_v8fi4uz7qt9.ttf") format("truetype");
+}
+
+.io {
+  font-family: "io" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.io-guancai:before {
+  content: "\e683";
+}
+
+.io-yaoguo:before {
+  content: "\e684";
+}
+
+.io-mubei:before {
+  content: "\e685";
+}
+
+.io-kulou:before {
+  content: "\e686";
+}
+
+.io-kaorou:before {
+  content: "\e687";
+}
+
+.io-zhutai:before {
+  content: "\e688";
+}
+
+.io-shuijingqiu:before {
+  content: "\e689";
+}
+
+.io-zhuwang:before {
+  content: "\e68a";
+}
+
+.io-maotouying:before {
+  content: "\e68b";
+}
+
+.io-yaoshui:before {
+  content: "\e68c";
+}
+
+.io-guiwu:before {
+  content: "\e68d";
+}
+
+.io-bianfu:before {
+  content: "\e68e";
+}
+
+.io-caidao:before {
+  content: "\e68f";
+}
+
+.io-youling:before {
+  content: "\e690";
+}
+
+.io-munaiyi:before {
+  content: "\e691";
+}
+
+.io-yugu:before {
+  content: "\e692";
+}
+
+.io-zhizhu:before {
+  content: "\e693";
+}
+
+.io-guairen:before {
+  content: "\e694";
+}
+
+.io-xixiegui:before {
+  content: "\e695";
+}
+
+.io-yanqiu:before {
+  content: "\e696";
+}
+
+.io-jingling:before {
+  content: "\e697";
+}
+
+.io-tangguo:before {
+  content: "\e698";
+}
+
+.io-nangua:before {
+  content: "\e699";
+}
+
+.io-nvwumao:before {
+  content: "\e69a";
+}
