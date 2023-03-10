@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>My Browser Homepage</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-guooysgG1f2QDyv95dUN+dQnRJzsoHnWZMvzgTDq3P7nrm8jjcW1sntJzCqADVRqJtX9+YebSvZxgQ2mJlBGMw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/b988687505.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/b988687505.css" crossorigin="anonymous">
     <style>
         /*实现页面随分辨率自适应*/
         body {
@@ -148,6 +147,12 @@
         .radio-group input[type="radio"]:checked+label {
             font-weight: bold;
         }
+
+        .input-group button {
+            font-size: 20px;
+            border: none;
+            outline: none;
+        }
     </style>
 </head>
 
@@ -167,7 +172,7 @@
         </div>
         <div class="input-group">
             <input type="text" name="q" autocomplete="off" class="form-control" placeholder="输入搜索内容" />
-            <button type="submit" class="input-group-text"><i class="fas fa-search"></i></button>
+            <button type="submit" class="input-group-text"><i class="fas fa-search" ;></i></button>
         </div>
     </form>
     <!-- 链接列表 -->
