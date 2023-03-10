@@ -57,13 +57,29 @@
         }
 
         #search-form input[type="text"] {
-            flex: 1;
-            padding: 10px;
-            font-size: 18px;
+            flex: 0;
+            font-size: 1pc;
             width: 500px;
             border: none;
             border-radius: 5px;
-            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /*搜索图标、放大镜*/
+        .input-group button {
+            border: none;
+            outline: none;
+            background: #383b3f;
+            width: 60px;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 3px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .input-group button:hover {
+            background-color: #26282c;
         }
 
         #links {
@@ -77,6 +93,15 @@
         input[type="text"] {
             border: none;
             outline: none;
+            position: relative;
+        }
+
+        input[type="text"]::before {
+            display: block;
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 20px;
         }
 
         #links a {
@@ -147,34 +172,31 @@
         .radio-group input[type="radio"]:checked+label {
             font-weight: bold;
         }
-
-        .input-group button {
-            font-size: 20px;
-            border: none;
-            outline: none;
-        }
     </style>
 </head>
 
 <body>
     <!-- 搜索表单 -->
-    <form id="search-form" action="https://www.google.com/search" method="GET" target="_blank">
+    <form id="search-form" target="_blank">
+        <!-- 搜索引擎选项 -->
         <div class="radio-group">
             <input type="radio" name="search-engine" value="https://www.google.com/search" onchange="changeAction()"
                 id="google">
             <label for="google">Google</label>
             <input type="radio" name="search-engine" value="https://www.baidu.com/s" onchange="changeAction()"
                 id="baidu">
-            <label for="baidu">baidu</label>
+            <label for="baidu">Baidu</label>
             <input type="radio" name="search-engine" value="https://www.bing.com/search" onchange="changeAction()"
                 id="bing">
-            <label for="bing">bing</label>
+            <label for="bing">Bing</label>
         </div>
+        <!-- 搜索输入框和提交按钮 -->
         <div class="input-group">
             <input type="text" name="q" autocomplete="off" class="form-control" placeholder="输入搜索内容" />
-            <button type="submit" class="input-group-text"><i class="fas fa-search" ;></i></button>
+            <button type="submit"><i class="fas fa-search"></i></button>
         </div>
     </form>
+
     <!-- 链接列表 -->
     <div id="links">
         <a href="https://translate.google.com.hk/?hl=zh-CN" target="_blank" onclick="buttonClick(this); sortButtons();"
@@ -224,12 +246,14 @@
         }
 
         //***实现搜索引擎切换***
+        // 当搜索引擎选项变化时，动态更新表单的 action 和查询参数
         function changeAction() {
             var radios = document.getElementsByName('search-engine');
             var form = document.getElementById("search-form");
             for (var i = 0; i < radios.length; i++) {
                 if (radios[i].checked) {
                     form.action = radios[i].value;
+                    // 当选择百度搜索时，更改查询参数名和编码方式
                     if (radios[i].value === "https://www.baidu.com/s") {
                         form.querySelector('input[name="q"]').name = "wd";
                         form.querySelector('input[name="ie"]').value = "utf-8";
@@ -240,6 +264,28 @@
                     break;
                 }
             }
+        }
+        // 获取表单元素
+        var form = document.getElementById("search-form");
+        var searchInput = form.querySelector('input[name="q"]');
+        var searchRadios = form.querySelectorAll('input[name="search-engine"]');
+
+        // 监听表单提交事件
+        form.addEventListener("submit", function (event) {
+            // 如果搜索内容为空或搜索引擎选项未选中，则阻止表单提交
+            if (!searchInput.value || !checkRadioSelected(searchRadios)) {
+                event.preventDefault();
+            }
+        });
+
+        // 辅助函数：检查单选框是否有选中项
+        function checkRadioSelected(radios) {
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    return true;
+                }
+            }
+            return false;
         }
     </script>
 </body>
