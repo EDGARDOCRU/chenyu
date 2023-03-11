@@ -247,6 +247,11 @@
 
         //***实现搜索引擎切换***
         // 当搜索引擎选项变化时，动态更新表单的 action 和查询参数
+        window.onload = function () {
+            var baiduOption = document.getElementById("baidu");
+            baiduOption.checked = true;
+            changeAction();
+        }
         function changeAction() {
             var radios = document.getElementsByName('search-engine');
             var form = document.getElementById("search-form");
