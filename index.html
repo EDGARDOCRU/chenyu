@@ -53,33 +53,20 @@
             align-items: center;
             padding: 20px;
             background-color: white;
-            border-radius: 5px;
+        }
+
+        #search-form input {
+            width: 30pc;
         }
 
         #search-form input[type="text"] {
-            flex: 0;
             font-size: 1pc;
-            width: 500px;
             border: none;
-            border-radius: 5px;
         }
 
-        /*搜索图标、放大镜*/
-        .input-group button {
-            border: none;
-            outline: none;
-            background: #383b3f;
-            width: 60px;
-            height: 36px;
-            line-height: 36px;
-            border-radius: 3px;
-            cursor: pointer;
-            color: #fff;
-            font-size: 18px;
-        }
-
-        .input-group button:hover {
-            background-color: #26282c;
+        .input-group {
+            width: auto;
+            display: flex;
         }
 
         #links {
@@ -160,17 +147,67 @@
             display: none;
         }
 
-        .radio-group label:before {
-            content: "";
-            margin-right: 5px;
+        /*搜索引擎选项按钮样式*/
+        .hvr-bubble-bottom {
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative
         }
 
-        .radio-group input[type="radio"]:checked+label:before {
-            content: "";
+        .hvr-bubble-bottom:before {
+            pointer-events: none;
+            position: absolute;
+            content: '';
+            border-style: solid;
+            left: calc(50% - 8px);
+            bottom: 0;
+            border-width: 7px 7px 0;
+            border-color: #383b3f transparent transparent;
+            display: none;
+            /* 默认隐藏 */
         }
 
-        .radio-group input[type="radio"]:checked+label {
-            font-weight: bold;
+        /* 选中时的样式 */
+        input:checked+label.hvr-bubble-bottom:before {
+            display: block;
+            transform: translateY(10px);
+        }
+
+        /*搜索图标、放大镜*/
+        .bn632-hover {
+            width: 70px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            height: 40px;
+            text-align: center;
+            border: none;
+            background-size: 300% 100%;
+            border-radius: 5px;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+
+        .bn632-hover:hover {
+            background-position: 100% 0;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+
+        .bn632-hover:focus {
+            outline: none;
+        }
+
+        .bn632-hover.bn25 {
+            background-image: linear-gradient(to right,
+                    #29323c,
+                    #485563,
+                    #2b5876,
+                    #4e4376);
         }
     </style>
 </head>
@@ -180,71 +217,31 @@
     <form id="search-form" target="_blank">
         <!-- 搜索引擎选项 -->
         <div class="radio-group">
-            <input type="radio" name="search-engine" value="https://www.google.com/search" onchange="changeAction()"
-                id="google">
-            <label for="google">Google</label>
-            <input type="radio" name="search-engine" value="https://www.baidu.com/s" onchange="changeAction()"
-                id="baidu">
-            <label for="baidu">Baidu</label>
-            <input type="radio" name="search-engine" value="https://www.bing.com/search" onchange="changeAction()"
-                id="bing">
-            <label for="bing">Bing</label>
+            <input type="radio" name="search-engine" value="https://www.google.com/search" onchange="changeAction()" id="google">
+            <label for="google" class="hvr-bubble-bottom">Google</label>
+            <input type="radio" name="search-engine" value="https://www.baidu.com/s" onchange="changeAction()" id="baidu">
+            <label for="baidu" class="hvr-bubble-bottom">Baidu</label>
+            <input type="radio" name="search-engine" value="https://www.bing.com/search" onchange="changeAction()" id="bing">
+            <label for="bing" class="hvr-bubble-bottom">Bing</label>
         </div>
         <!-- 搜索输入框和提交按钮 -->
         <div class="input-group">
             <input type="text" name="q" autocomplete="off" class="form-control" placeholder="输入搜索内容" />
-            <button type="submit"><i class="fas fa-search"></i></button>
+            <button type="submit" class="bn632-hover bn25"><i class="fas fa-search"></i></button>
         </div>
     </form>
-
     <!-- 链接列表 -->
     <div id="links">
-        <a href="https://translate.google.com.hk/?hl=zh-CN" target="_blank" onclick="buttonClick(this); sortButtons();"
-            data-count="0" data-name="random-name-1">谷歌翻译</a>
-        <a href="https://graph.baidu.com/pcpage/index?tpl_from=pc" target="_blank"
-            onclick="buttonClick(this); sortButtons();" data-count="0" data-name="random-name-2">百度识图</a>
-        <a href=" https://www.github.com" target="_blank" onclick="buttonClick(this); sortButtons();" data-count="0"
-            data-name="random-name-3">GitHub</a>
-        <a href="https://www.bilibili.com/" target="_blank" onclick="buttonClick(this); sortButtons();" data-count="0"
-            data-name="random-name-4">bilibili</a>
-        <a href="https://cloud.hecom.cn/login" target="_blank" onclick="buttonClick(this); sortButtons();"
-            data-count="0" data-name="random-name-5">红圈CRM°</a>
-        <a href="http://gdkjie.com:8888/login.aspx" target="_blank" onclick="buttonClick(this); sortButtons();"
-            data-count="0" data-name="random-name-6">科捷检测</a>
-        <a href="https://gzsm.org.cn/js/a/login" target="_blank" onclick="buttonClick(this); sortButtons();"
-            data-count="0" data-name="random-name-7">建设管理</a>
-        <a href="https://chat.openai.com/chat/" target="_blank" onclick="buttonClick(this); sortButtons();"
-            data-count="0" data-name="random-name-8">ChatGPT</a>
+        <a href="https://translate.google.com.hk/?hl=zh-CN" target="_blank">谷歌翻译</a>
+        <a href="https://graph.baidu.com/pcpage/index?tpl_from=pc" target="_blank">百度识图</a>
+        <a href=" https://www.github.com" target="_blank">GitHub</a>
+        <a href="https://www.bilibili.com/" target="_blank">bilibili</a>
+        <a href="https://cloud.hecom.cn/login" target="_blank">红圈CRM°</a>
+        <a href="http://gdkjie.com:8888/login.aspx" target="_blank">科捷检测</a>
+        <a href="https://gzsm.org.cn/js/a/login" target="_blank">建设管理</a>
+        <a href="https://chat.openai.com/chat/" target="_blank">ChatGPT</a>
     </div>
     <script>
-        //***实现按钮以点击次数排列***
-        function buttonClick(button) {
-            var count = parseInt(button.dataset.count);
-            count++;
-            button.dataset.count = count;
-            if (!button.dataset.originalText) {
-                button.dataset.originalText = button.textContent;
-            }
-            button.textContent = button.dataset.originalText;
-        }
-
-        function sortButtons() {
-            // 获取所有按钮并转换为数组
-            var buttons = Array.from(document.querySelectorAll('#links a'));
-
-            // 按照点击次数从大到小排序
-            buttons.sort(function (a, b) {
-                return parseInt(b.dataset.count) - parseInt(a.dataset.count);
-            });
-
-            // 将排好序的按钮重新添加到页面中
-            var container = document.querySelector('#links');
-            container.innerHTML = '';
-            buttons.forEach(function (button) {
-                container.appendChild(button);
-            });
-        }
-
         //***实现搜索引擎切换***
         // 当搜索引擎选项变化时，动态更新表单的 action 和查询参数
         window.onload = function () {
