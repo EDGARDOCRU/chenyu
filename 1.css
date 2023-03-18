@@ -1,0 +1,307 @@
+ /*实现页面随分辨率自适应*/
+ body {
+   margin: 0;
+   padding: 0;
+ }
+
+ header {
+   background-color: #333;
+   color: #fff;
+   padding: 20px;
+   text-align: center;
+ }
+
+ nav {
+   background-color: #ccc;
+   display: flex;
+   justify-content: space-around;
+   padding: 10px;
+ }
+
+ nav a {
+   color: #333;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 1.2em;
+ }
+
+ /* 搜索引擎选项 */
+ #search-form {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+   background-color: white;
+ }
+
+ #search-form input {
+   width: 30pc;
+ }
+
+ #search-form input[type="text"] {
+   font-size: 1pc;
+   border: none;
+ }
+
+ /*搜索输入框和提交按钮*/
+ .input-group {
+   width: auto;
+   display: flex;
+ }
+
+ input[type="text"] {
+   border: none;
+   outline: none;
+   position: relative;
+ }
+
+ input[type="text"]::before {
+   display: block;
+   position: absolute;
+   top: 50%;
+   width: 20px;
+   height: 20px;
+ }
+
+ #search-form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .radio-group {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 10px;
+ }
+
+ .radio-group label {
+   margin: 0 10px;
+ }
+
+ .search-bar {
+   display: flex;
+   align-items: center;
+ }
+
+ .search-bar input[type="text"] {
+   margin-right: 10px;
+ }
+
+ /*点击选项取消圆圈显示*/
+ .radio-group input[type="radio"] {
+   display: none;
+ }
+
+ /*搜索引擎选项按钮样式*/
+ .hvr-bubble-bottom {
+   cursor: pointer;
+   display: inline-block;
+   vertical-align: middle;
+   position: relative
+ }
+
+ .hvr-bubble-bottom:before {
+   pointer-events: none;
+   position: absolute;
+   content: '';
+   border-style: solid;
+   left: calc(50% - 8px);
+   bottom: 0;
+   border-width: 7px 7px 0;
+   border-color: #383b3f transparent transparent;
+   display: none;
+   /* 默认隐藏 */
+ }
+
+ /* 选中时的样式 */
+ input:checked+label.hvr-bubble-bottom:before {
+   display: block;
+   transform: translateY(10px);
+ }
+
+ /*搜索图标、放大镜*/
+ .bn632-hover {
+   width: 70px;
+   font-size: 16px;
+   font-weight: 600;
+   color: #fff;
+   cursor: pointer;
+   height: 40px;
+   text-align: center;
+   border: none;
+   background-size: 300% 100%;
+   border-radius: 5px;
+   -o-transition: all .4s ease-in-out;
+   -webkit-transition: all .4s ease-in-out;
+   transition: all .4s ease-in-out;
+ }
+
+ .bn632-hover:hover {
+   background-position: 100% 0;
+   -o-transition: all .4s ease-in-out;
+   -webkit-transition: all .4s ease-in-out;
+   transition: all .4s ease-in-out;
+ }
+
+ .bn632-hover:focus {
+   outline: none;
+ }
+
+ .bn632-hover.bn25 {
+   background-image: linear-gradient(to right,
+       #29323c,
+       #485563,
+       #2b5876,
+       #4e4376);
+ }
+
+ .input-group-button.dark {
+   --background: #2f3545;
+   --shadow: 0 2px 8px -1px rgba(21, 25, 36, 0.32);
+   --shadow-hover: 0 4px 20px -2px rgba(21, 25, 36, 0.5);
+ }
+
+ .input-group-button.white {
+   --background: #fff;
+   --text: #275efe;
+   --shadow: 0 2px 8px -1px rgba(18, 22, 33, 0.04);
+   --shadow-hover: 0 4px 20px -2px rgba(18, 22, 33, 0.12);
+ }
+
+ .input-group-fast {
+   --duration: 0.32s;
+ }
+
+ /*链接列表样式*/
+ #links {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   max-width: 1500px;
+   margin: 30px auto;
+ }
+
+ #links>* {
+   flex: 0 0 100px;
+   margin: 20px;
+ }
+
+ .button.dark {
+   --background: #46506d;
+   --shadow: 0 2px 8px -1px rgba(21, 25, 36, 0.32);
+   --shadow-hover: 0 4px 20px -2px rgba(21, 25, 36, 0.5);
+ }
+
+ .button.white {
+   --background: #fff;
+   --text: #275efe;
+   --shadow: 0 2px 8px -1px rgba(18, 22, 33, 0.04);
+   --shadow-hover: 0 4px 20px -2px rgba(18, 22, 33, 0.12);
+ }
+
+ .button.fast {
+   --duration: 0.32s;
+ }
+
+ .button {
+   --background: #275efe;
+   --text: #fff;
+   --font-size: 30px;
+   --duration: 0.44s;
+   --move-hover: -4px;
+   --shadow: 0 2px 8px -1px rgba(39, 94, 254, 0.32);
+   --shadow-hover: 0 4px 20px -2px rgba(39, 94, 254, 0.5);
+   --font-shadow: var(--font-size);
+   padding: 16px 32px;
+   font-family: "Roboto";
+   font-weight: 500;
+   line-height: var(--font-size);
+   border-radius: 5px;
+   display: block;
+   outline: none;
+   text-decoration: none;
+   font-size: 20px;
+   letter-spacing: 0.5px;
+   background: var(--background);
+   color: var(--text);
+   box-shadow: var(--shadow);
+   transform: translateY(var(--y)) translateZ(0);
+   transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+ }
+
+ .button div {
+   display: flex;
+   overflow: hidden;
+   text-shadow: 0 var(--font-shadow) 0 var(--text);
+ }
+
+ .button div span {
+   display: block;
+   backface-visibility: hidden;
+   font-style: normal;
+   transition: transform var(--duration) ease;
+   transform: translateY(var(--m)) translateZ(0);
+ }
+
+ .button div span:nth-child(1) {
+   transition-delay: 0.05s;
+ }
+
+ .button div span:nth-child(2) {
+   transition-delay: 0.1s;
+ }
+
+ .button div span:nth-child(3) {
+   transition-delay: 0.15s;
+ }
+
+ .button div span:nth-child(4) {
+   transition-delay: 0.2s;
+ }
+
+ .button div span:nth-child(5) {
+   transition-delay: 0.25s;
+ }
+
+ .button div span:nth-child(6) {
+   transition-delay: 0.3s;
+ }
+
+ .button div span:nth-child(7) {
+   transition-delay: 0.35s;
+ }
+
+ .button div span:nth-child(8) {
+   transition-delay: 0.4s;
+ }
+
+ .button div span:nth-child(9) {
+   transition-delay: 0.45s;
+ }
+
+ .button div span:nth-child(10) {
+   transition-delay: 0.5s;
+ }
+
+ .button div span:nth-child(11) {
+   transition-delay: 0.55s;
+ }
+
+ .button:hover {
+   --y: var(--move-hover);
+   --shadow: var(--shadow-hover);
+ }
+
+ .button:hover span {
+   --m: calc(var(--font-size) * -1);
+ }
+
+ .button.reverse {
+   --font-shadow: calc(var(--font-size) * -1);
+ }
+
+ .button.reverse:hover span {
+   --m: calc(var(--font-size));
+ }
