@@ -202,6 +202,7 @@ input:checked+label.hvr-bubble-bottom:before {
 }
 
 /*链接按钮字体*/
+
 .links-box i {
   padding: 20px;
   color: black;
@@ -249,17 +250,13 @@ input:checked+label.hvr-bubble-bottom:before {
   transition-property: transform, opacity;
 }
 
-.hvr-float-shadow:hover,
-.hvr-float-shadow:focus,
-.hvr-float-shadow:active {
+.hvr-float-shadow:hover {
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
   /*将元素向上移动 5px*/
 }
 
-.hvr-float-shadow:hover:before,
-.hvr-float-shadow:focus:before,
-.hvr-float-shadow:active:before {
+.hvr-float-shadow:hover:before {
   opacity: 1;
   -webkit-transform: translateY(5px);
   transform: translateY(5px);
