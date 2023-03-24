@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Browser Homepage</title>
+    <script src="https://kit.fontawesome.com/b988687505.js" crossorigin="anonymous"></script>
+    <script src="//at.alicdn.com/t/c/font_3968750_jdl7h27ndv.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+    <!-- 搜索表单 -->
+    <form id="search-form" target="_blank">
+        <!-- 搜索引擎选项 -->
+        <div class="radio-group">
+            <input type="radio" name="search-engine" value="https://www.google.com/search" onchange="changeAction()" id="google">
+            <label for="google" class="hvr-bubble-bottom">Google</label>
+            <input type="radio" name="search-engine" value="https://www.baidu.com/s" onchange="changeAction()" id="baidu">
+            <label for="baidu" class="hvr-bubble-bottom">Baidu</label>
+            <input type="radio" name="search-engine" value="https://www.bing.com/search" onchange="changeAction()" id="bing">
+            <label for="bing" class="hvr-bubble-bottom">Bing</label>
+        </div>
+        <!-- 搜索输入框和提交按钮 -->
+        <div class="input-group">
+            <input type="text" name="q" autocomplete="off" class="form-control" placeholder="输入搜索内容" />
+            <button type="submit" class="bn632-hover bn25"><i class="fas fa-search"></i></button>
+        </div>
+    </form>
+    <!-- 链接列表 -->
+    <div id="links">
+        <a class="links-box hvr-float-shadow" href="https://translate.google.com.hk/?hl=zh-CN" target="_blank">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-google-translate"></use>
+            </svg>
+            <i>谷歌翻译</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://graph.baidu.com/pcpage/index?tpl_from=pc" target="_blank">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-baidu"></use>
+            </svg>
+            <i>百度识图</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://www.github.com" target="_blank">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-github"></use>
+            </svg>
+            <i>GitHub</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://www.bilibili.com/" target="_blank">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-bilibili"></use>
+            </svg>
+            <i>bilibili</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://cloud.hecom.cn/login" target="_blank">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-a-hongquanCRM"></use>
+            </svg>
+            <i>红圈CRM°</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="http://gdkjie.com:8888/login.aspx" target="_blank">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-a-favi-21"></use>
+            </svg>
+            <i>科捷检测</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://gzsm.org.cn/js/a/login" target="_blank">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-chengshijianshe"></use>
+            </svg>
+            <i>建设管理</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://chat.openai.com/chat/" target="_blank">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-a-ChatGPT1"></use>
+            </svg>
+            <i>ChatGPT</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://www.youtube.com/" target="_blank">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-youtube1"></use>
+            </svg>
+            <i>YouTube</i>
+        </a>
+    </div>
+    <script src="1.js"></script>
+</body>

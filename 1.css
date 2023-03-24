@@ -262,3 +262,5 @@ input:checked+label.hvr-bubble-bottom:before {
   transform: translateY(5px);
   /*将元素向下移动 5px（它将留在原地，因为它附加到也向上移动 5px 的元素）*/
 }
+
+/*动态页面背景*/
