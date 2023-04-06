@@ -45,5 +45,16 @@ function checkRadioSelected(radios) {
   }
   return false;
 }
-// ***链接列表样式***
-document.querySelectorAll(".button").forEach((button) => (button.innerHTML = "<div><span>" + button.textContent.trim().split("").join("</span><span>") + "</span></div>"));
+//***为元素提供附加的文本信息。当用户将鼠标悬停在链接列表的元素上时，浏览器将显示该属性的i值作为提示。***
+// 获取所有链接元素
+var links = document.querySelectorAll(".links-box");
+
+// 为每个链接元素添加提示框
+links.forEach(function (link) {
+  var tooltipContent = link.querySelector("i").getAttribute("content");
+  tippy(link, {
+    content: tooltipContent,
+    placement: "bottom",
+    animation: "scale",
+  });
+});

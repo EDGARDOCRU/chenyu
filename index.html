@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <title>chenyu Browser Homepage</title>
     <script src="https://kit.fontawesome.com/b988687505.js" crossorigin="anonymous"></script>
-    <script src="//at.alicdn.com/t/c/font_3968750_ekwnhbrqju.js" crossorigin="anonymous"></script>
+    <script src="//at.alicdn.com/t/c/font_3968750_md0jtwohxda.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
     <link rel="stylesheet" href="1.css">
+    <link rel="shortcut icon" href="chenyu.png" type="image/png">
 </head>
 
 <body>
@@ -33,35 +37,36 @@
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-google-translate"></use>
             </svg>
-            <i>谷歌翻译</i>
+            <i content="Google 免费提供的这项服务可在简体中文和其他 100 多种语言之间即时翻译字词、短语和网页。">谷歌翻译</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://graph.baidu.com/pcpage/index?tpl_from=pc" target="_blank">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-baidu"></use>
             </svg>
-            <i>百度识图</i>
+            <i content="百度图像搜索-领先的图像识别技术连接人与信息-为你搜寻所见">百度识图</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.github.com" target="_blank">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-github"></use>
             </svg>
-            <i>GitHub</i>
+            <i content="GitHub 是人们构建软件的地方。 超过 1 亿人使用 GitHub 发现、分叉和贡献超过 3.3 亿个项目。">GitHub</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.bilibili.com/" target="_blank">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-bilibili"></use>
             </svg>
-            <i>bilibili</i>
+            <i content="哔哩哔哩（bilibili.com）是国内知名的视频弹幕网站，这里有及时的动漫新番，活跃的ACG氛围，有创意的Up主。大家可以在这里找到许多欢乐。">bilibili</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://cloud.hecom.cn/login" target="_blank">
             <img src="https://cloud.hecom.cn/favicon.ico" width="40" height="40">
-            <i>红圈CRM°</i>
+            <i
+                content="红圈CRM团队结合云计算、大数据、AI技术和BI能力，基于红圈PaaS平台能力构建的“工程项目管理”、“客户关系管理”和“销售业务管理”等SaaS级移动CRM数据智能解决方案，帮助企业打破组织隔阂、规范团队执行、降低经营成本、提升管理效率、加速资金周转、规避经营风险。成功地将基于新型移动互联网技术的数据智能决策能力贯穿于企业经营全流程自动化业务场景中，用移动数据智能赋能企业提升了企业的核心竞争力，实现了企业的业绩规模化持续增长，助力企业的数字化转型成功。">红圈CRM°</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://gzsm.org.cn/js/a/login" target="_blank">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-jianzhuyeguanli"></use>
             </svg>
-            <i>建设管理</i>
+            <i content="广州市建设领域管理应用信息平台">建设管理</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://chat.openai.com/chat/" target="_blank">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,40 +74,101 @@
                     d="M37.5324 16.8707C37.9808 15.5241 38.1363 14.0974 37.9886 12.6859C37.8409 11.2744 37.3934 9.91076 36.676 8.68622C35.6126 6.83404 33.9882 5.3676 32.0373 4.4985C30.0864 3.62941 27.9098 3.40259 25.8215 3.85078C24.8796 2.7893 23.7219 1.94125 22.4257 1.36341C21.1295 0.785575 19.7249 0.491269 18.3058 0.500197C16.1708 0.495044 14.0893 1.16803 12.3614 2.42214C10.6335 3.67624 9.34853 5.44666 8.6917 7.47815C7.30085 7.76286 5.98686 8.3414 4.8377 9.17505C3.68854 10.0087 2.73073 11.0782 2.02839 12.312C0.956464 14.1591 0.498905 16.2988 0.721698 18.4228C0.944492 20.5467 1.83612 22.5449 3.268 24.1293C2.81966 25.4759 2.66413 26.9026 2.81182 28.3141C2.95951 29.7256 3.40701 31.0892 4.12437 32.3138C5.18791 34.1659 6.8123 35.6322 8.76321 36.5013C10.7141 37.3704 12.8907 37.5973 14.9789 37.1492C15.9208 38.2107 17.0786 39.0587 18.3747 39.6366C19.6709 40.2144 21.0755 40.5087 22.4946 40.4998C24.6307 40.5054 26.7133 39.8321 28.4418 38.5772C30.1704 37.3223 31.4556 35.5506 32.1119 33.5179C33.5027 33.2332 34.8167 32.6547 35.9659 31.821C37.115 30.9874 38.0728 29.9178 38.7752 28.684C39.8458 26.8371 40.3023 24.6979 40.0789 22.5748C39.8556 20.4517 38.9639 18.4544 37.5324 16.8707ZM22.4978 37.8849C20.7443 37.8874 19.0459 37.2733 17.6994 36.1501C17.7601 36.117 17.8666 36.0586 17.936 36.0161L25.9004 31.4156C26.1003 31.3019 26.2663 31.137 26.3813 30.9378C26.4964 30.7386 26.5563 30.5124 26.5549 30.2825V19.0542L29.9213 20.998C29.9389 21.0068 29.9541 21.0198 29.9656 21.0359C29.977 21.052 29.9842 21.0707 29.9867 21.0902V30.3889C29.9842 32.375 29.1946 34.2791 27.7909 35.6841C26.3872 37.0892 24.4838 37.8806 22.4978 37.8849ZM6.39227 31.0064C5.51397 29.4888 5.19742 27.7107 5.49804 25.9832C5.55718 26.0187 5.66048 26.0818 5.73461 26.1244L13.699 30.7248C13.8975 30.8408 14.1233 30.902 14.3532 30.902C14.583 30.902 14.8088 30.8408 15.0073 30.7248L24.731 25.1103V28.9979C24.7321 29.0177 24.7283 29.0376 24.7199 29.0556C24.7115 29.0736 24.6988 29.0893 24.6829 29.1012L16.6317 33.7497C14.9096 34.7416 12.8643 35.0097 10.9447 34.4954C9.02506 33.9811 7.38785 32.7263 6.39227 31.0064ZM4.29707 13.6194C5.17156 12.0998 6.55279 10.9364 8.19885 10.3327C8.19885 10.4013 8.19491 10.5228 8.19491 10.6071V19.808C8.19351 20.0378 8.25334 20.2638 8.36823 20.4629C8.48312 20.6619 8.64893 20.8267 8.84863 20.9404L18.5723 26.5542L15.206 28.4979C15.1894 28.5089 15.1703 28.5155 15.1505 28.5173C15.1307 28.5191 15.1107 28.516 15.0924 28.5082L7.04046 23.8557C5.32135 22.8601 4.06716 21.2235 3.55289 19.3046C3.03862 17.3858 3.30624 15.3413 4.29707 13.6194ZM31.955 20.0556L22.2312 14.4411L25.5976 12.4981C25.6142 12.4872 25.6333 12.4805 25.6531 12.4787C25.6729 12.4769 25.6928 12.4801 25.7111 12.4879L33.7631 17.1364C34.9967 17.849 36.0017 18.8982 36.6606 20.1613C37.3194 21.4244 37.6047 22.849 37.4832 24.2684C37.3617 25.6878 36.8382 27.0432 35.9743 28.1759C35.1103 29.3086 33.9415 30.1717 32.6047 30.6641C32.6047 30.5947 32.6047 30.4733 32.6047 30.3889V21.188C32.6066 20.9586 32.5474 20.7328 32.4332 20.5338C32.319 20.3348 32.154 20.1698 31.955 20.0556ZM35.3055 15.0128C35.2464 14.9765 35.1431 14.9142 35.069 14.8717L27.1045 10.2712C26.906 10.1554 26.6803 10.0943 26.4504 10.0943C26.2206 10.0943 25.9948 10.1554 25.7963 10.2712L16.0726 15.8858V11.9982C16.0715 11.9783 16.0753 11.9585 16.0837 11.9405C16.0921 11.9225 16.1048 11.9068 16.1207 11.8949L24.1719 7.25025C25.4053 6.53903 26.8158 6.19376 28.2383 6.25482C29.6608 6.31589 31.0364 6.78077 32.2044 7.59508C33.3723 8.40939 34.2842 9.53945 34.8334 10.8531C35.3826 12.1667 35.5464 13.6095 35.3055 15.0128ZM14.2424 21.9419L10.8752 19.9981C10.8576 19.9893 10.8423 19.9763 10.8309 19.9602C10.8195 19.9441 10.8122 19.9254 10.8098 19.9058V10.6071C10.8107 9.18295 11.2173 7.78848 11.9819 6.58696C12.7466 5.38544 13.8377 4.42659 15.1275 3.82264C16.4173 3.21869 17.8524 2.99464 19.2649 3.1767C20.6775 3.35876 22.0089 3.93941 23.1034 4.85067C23.0427 4.88379 22.937 4.94215 22.8668 4.98473L14.9024 9.58517C14.7025 9.69878 14.5366 9.86356 14.4215 10.0626C14.3065 10.2616 14.2466 10.4877 14.2479 10.7175L14.2424 21.9419ZM16.071 17.9991L20.4018 15.4978L24.7325 17.9975V22.9985L20.4018 25.4983L16.071 22.9985V17.9991Z"
                     fill="currentColor"></path>
             </svg>
-            <i>ChatGPT</i>
+            <i content="ChatGPT 是由 OpenAI 开发的一种人工智能语言模型，能够根据上下文和过去的对话生成类似人类的文本。">ChatGPT</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.youtube.com/" target="_blank">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-youtube1"></use>
             </svg>
-            <i>YouTube</i>
+            <i content="在 YouTube 上欣赏您喜爱的视频和音乐，上传原创内容，并与朋友、家人和全世界分享。">YouTube</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://movie.douban.com/" target="_blank">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-social-douban"></use>
             </svg>
-            <i>豆瓣电影</i>
+            <i content="豆瓣电影提供最新的电影介绍及评论包括上映影片的影讯查询及购票服务。你可以记录想看、在看和看过的电影电视剧，顺便打分、写影评。根据你的口味，豆瓣电影会推荐好电影给你。">豆瓣电影</i>
         </a>
-        <a class="links-box hvr-float-shadow" href="https://www.iconfont.cn/" target="_blank" title="阿里巴巴矢量图标库">
+        <a class="links-box hvr-float-shadow" href="https://www.iconfont.cn/" target="_blank">
             <img src="https://img.alicdn.com/imgextra/i4/O1CN01XZe8pH1USpiUNT1QN_!!6000000002517-2-tps-114-114.png" width="40" height="40">
-            <i>阿里巴巴矢量图标库</i>
+            <i content="iconfont-国内功能很强大且图标内容很丰富的矢量图标库，提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造，设计和前端开发的便捷工具">iconfont</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://mp.toutiao.com/" target="_blank">
             <img src="https://lf6-cdn-tos.bytegoofy.com/goofy/pgcfe/mp/web/icon_256x256.110752bd2a97d39566aa7266a0e86751.png" width="40" height="40">
-            <i>头条号</i>
+            <i
+                content="头条号是今日头条推出的开放的内容创作与分发平台，基于今日头条革命性的推荐引擎，实现媒体、企业、政府等机构与个人的内容创作、发布与精准分发。成功申请并入驻头条号平台后，用户可以创作、发布包括文字、图片、视频等多种形式的内容，经过今日头条推荐引擎，向数亿今日头条用户展示。目前，头条号所发布内容产生的阅读量占今日头条阅读总量的90%左右。">头条号</i>
         </a>
-        <a class="links-box hvr-float-shadow" href="https://creator.douyin.com/" target="_blank" title="抖音创作服务平台">
+        <a class="links-box hvr-float-shadow" href="https://creator.douyin.com/" target="_blank">
             <img src="https://lf3-static.bytednsdoc.com/obj/eden-cn/yvahlyj_upfbvk_zlp/ljhwZthlaukjlkulzlp/pc_creator/favicon_v2_7145ff0.ico" width="40" height="40">
-            <i>抖音创作服务平台</i>
+            <i content="抖音创作服务平台是抖音创作者的专属服务平台，支持用户作为创作者和管理机构两种登陆方式，并通过提供授权管理、内容管理、互动管理及数据管理等服务助力抖音用户高效运营！">抖音创作服务平台</i>
         </a>
-        <a class="links-box hvr-float-shadow" href="https://studio.ixigua.com/" target="_blank" title="西瓜创作平台">
+        <a class="links-box hvr-float-shadow" href="https://studio.ixigua.com/" target="_blank">
             <img src="https://sf1-cdn-tos.douyinstatic.com/obj/eden-cn/lpqpflo/ixigua_favicon.ico" width="40" height="40">
-            <i>西瓜创作平台</i>
+            <i content="西瓜创作平台是西瓜创作者的专属创作平台，支持用户发布西瓜视频，并通过提供发布视频、内容管理、数据分析、评论管理、收益分析、创作激励、创作课程、消息管理等服务助力西瓜用户高效运营和创作！">西瓜创作平台</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://music.163.com/#/creatorcenter?module=creatorcenter" target="_blank">
             <img src="https://s1.music.126.net/style/favicon.ico?v20180823" width="40" height="40">
-            <i>网易云音乐</i>
+            <i content="网易云音乐是一款专注于发现与分享的音乐产品，依托专业音乐人、DJ、好友推荐及社交功能，为用户打造全新的音乐生活。">网易云音乐</i>
         </a>
+        <a class="links-box hvr-float-shadow" href="https://houzigpt.cc/#/chat/1002" target="_blank">
+            <img src="https://www.quantumore.com/wp-content/uploads/2022/12/favicon.ico-45x45.png" width="40" height="40">
+            <i content="hiChatGPT.cc-性能更强的ChatGPT代理服务">hichatgpt</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://mypikpak.com/drive/all" target="_blank">
+            <img src="https://mypikpak.com/android-chrome-192x192.png" width="40" height="40">
+            <i content="PikPak是一款可以高速保存您喜欢的文件，并支持随时在线查看和播放的私有云盘。 亮点包括功能齐全的云下载，高达 10T 的大空间，闪电般的快速保存和一键播放，通过 Telegram 上的 bot 方便地保存任何文件。">PikPak</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://mp.weixin.qq.com/" target="_blank">
+            <img src="https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico" width="40" height="40">
+            <i content="微信公众平台,微信公众平台官方网站,公众号注册,微信公众号注册,微信订阅号注册,微信公众号申请,微信服务号申请,微信订阅号申请,微信企业号申请,微信服务号注册,微信企业号注册,订阅号注册,公众号申请,服务号申请,订阅号申请,企业号申请,服务号注册,企业号注册,微信">微信公众平台</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://topbook.cc/" target="_blank">
+            <img src="https://cdn.labs.topbook.cc/icon.png" width="40" height="40">
+            <i content="Topbook是一本持续更新的视频书，致力于让现代人摆脱资讯的控制，在避无可避的科技生活中，让工具回归工具，让每个人成为自己。">Topbook</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://chatbot.theb.ai/" target="_blank">
+            <img src="https://chatbot.theb.ai/assets/bai.png" width="40" height="40">
+            <i content="BAI Chat 是一款基于 GPT-3.5 / ChatGPT API 的聊天机器人，免费、方便且响应迅速。 试一试！">BAI Chat</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://kaiyiwing.gitee.io/qwerty-learner/" target="_blank">
+            <img src="https://kaiyiwing.gitee.io/qwerty-learner/android-chrome-192x192.png" width="40" height="40">
+            <i content="Qwerty Learner / 为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件 / Words learning and English muscle memory training software designed for keyboard workers">Qwerty Learner</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://sms-activate.org/getNumber" target="_blank">
+            <img src="https://smsactivate.s3.eu-central-1.amazonaws.com/assets/img/activate_favicon32.png" width="40" height="40">
+            <i content="获取虚拟手机号码。短期手机号码。手机短信激活服务">SMS-Activate</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://iconscout.com/" target="_blank">
+            <img src="https://iconscout.com/favicon-32x32.png" width="40" height="40">
+            <i content="访问超过 610 万个免费或付费矢量图标、插图、3D 插图和适用于任何设计的 Lottie 动画。 提供 PNG、SVG、GIF、EPS、JSON 等格式。">IconScout</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://www.52pojie.cn/" target="_blank">
+            <img src="https://www.52pojie.cn/favicon.ico" width="40" height="40">
+            <i content="吾爱破解,破解论坛,破解软件,软件论坛,病毒分析,脱壳破解,安卓破解,加密解密,软件安全">吾爱破解</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://buff.163.com/market/csgo#tab=selling&page_num=1" target="_blank">
+            <img src="https://g.fp.ps.netease.com/market/file/59b156975e6027bce06e8f6ceTyFGdsj" width="40" height="40">
+            <i content="网易BUFF饰品交易平台,为全球玩家提供专业安全的CS:GO饰品交易服务,买CS:GO饰品就上网易BUFF">网易BUFF</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://imyshare.com/" target="_blank">
+            <img src="https://imyshare.com/favicon.ico" width="40" height="40">
+            <i content="iMyShare,网址导航,资源分享,资源搜索,网盘搜索,免费视频网站,实用软件,软件资源,实用工具,下载工具,视频下载,免费音乐下载,电子书下载网站,办公素材,设计素材,有趣的网站,免费漫画网站,免费动漫">iMyShare</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://www.tiktok.com/foryou" target="_blank">
+            <img src="https://www.tiktok.com/favicon.ico" width="40" height="40">
+            <i content="TikTok 网罗众多精彩内容。快来加入数百万观众之列，在 TikTok 上探索优质内容与创作者。">TikTok</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://www.facebook.com/" target="_blank">
+            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/hsAgIHTE80C.png" width="40" height="40">
+            <i content="登录 Facebook，与好友、家人和认识的人分享和建立联系。">Facebook</i>
+        </a>
+        <a class="links-box hvr-float-shadow" href="https://twitter.com/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40">
+                <path
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                    fill="#03A9F4" />
+            </svg> <i content="Twitter 上的最新故事，通过推文讲述。">Twitter</i>
+        </a>
+
     </div>
     <script src="1.js"></script>
 </body>
