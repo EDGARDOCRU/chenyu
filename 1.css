@@ -1,17 +1,7 @@
-/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
-@font-face {
-  font-family: "Regular";
-  font-weight: 500;
-  src: url("//at.alicdn.com/wf/webfont/EBKvFriImO6z/aGcbzQTtO2Jx.woff2") format("woff2"),
-    url("//at.alicdn.com/wf/webfont/EBKvFriImO6z/WPRaO34Kwpr5.woff") format("woff");
-  font-display: swap;
-}
-
 /*实现页面随分辨率自适应*/
 body {
   margin: 0;
   padding: 0;
-  font-family: "Regular";
 }
 
 /* 搜索引擎选项 */
@@ -191,7 +181,7 @@ input:checked+label.hvr-bubble-bottom:before {
 }
 
 #links>* {
-  flex: 0 0 200px;
+  width: 200px;
   margin: 20px;
 }
 
@@ -210,10 +200,14 @@ input:checked+label.hvr-bubble-bottom:before {
 /*链接按钮字体*/
 
 .links-box i {
+  width: 88px;
+  /* 设置元素的宽度 */
   padding: 20px;
   color: black;
   font-size: 1.35pc;
   font-style: normal;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .icon {
