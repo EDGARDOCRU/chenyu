@@ -2,6 +2,7 @@
 body {
   margin: 0;
   padding: 0;
+  background: #f9f9f9;
 }
 
 /* 搜索引擎选项 */
@@ -22,17 +23,6 @@ body {
   font-size: 1.35pc;
   border: none;
   user-select: none;
-}
-
-/*搜索输入框和提交按钮*/
-.input-group {
-  width: auto;
-  display: flex;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"] {
   background-color: transparent;
   /* 设置输入框的背景色为透明 */
   border: none;
@@ -40,16 +30,13 @@ input[type="email"] {
   outline: none;
   /* 取消输入框获得焦点时的外边框 */
   position: relative;
-  font-family: "Regular";
 }
 
-input[type="text"]::before {
-  color: #275efe;
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 20px;
-  height: 20px;
+/*搜索输入框和提交按钮大小*/
+.input-group {
+  width: 600px;
+  /* 设置一个固定的宽度 */
+  display: flex;
 }
 
 /*占位符点击后字体颜色样式*/
@@ -145,10 +132,10 @@ input:checked+label.hvr-bubble-bottom:before {
 
 .bn632-hover.bn25 {
   background-image: linear-gradient(to right,
-      #29323c,
-      #485563,
-      #2b5876,
-      #4e4376);
+      #FF6347,
+      #FF8C00,
+      #FFD700,
+      #3CB371);
 }
 
 .input-group-button.dark {
@@ -175,6 +162,7 @@ input:checked+label.hvr-bubble-bottom:before {
   max-width: 1680px;
   margin: 30px auto;
   justify-content: flex-start;
+  user-select: none;
 }
 
 #links>* {
@@ -254,106 +242,4 @@ input:checked+label.hvr-bubble-bottom:before {
   -webkit-transform: translateY(5px);
   transform: translateY(5px);
   /*将元素向下移动 5px（它将留在原地，因为它附加到也向上移动 5px 的元素）*/
-}
-
-/*动态页面背景*/
-body {
-  background-color: #e493d0;
-  background-image:
-    radial-gradient(closest-side, rgba(235, 105, 78, 1), rgba(235, 105, 78, 0)),
-    radial-gradient(closest-side, rgba(243, 11, 164, 1), rgba(243, 11, 164, 0)),
-    radial-gradient(closest-side, rgba(254, 234, 131, 1), rgba(254, 234, 131, 0)),
-    radial-gradient(closest-side, rgba(170, 142, 245, 1), rgba(170, 142, 245, 0)),
-    radial-gradient(closest-side, rgba(248, 192, 147, 1), rgba(248, 192, 147, 0));
-  background-size:
-    130vmax 130vmax,
-    80vmax 80vmax,
-    90vmax 90vmax,
-    110vmax 110vmax,
-    90vmax 90vmax;
-  background-position:
-    -80vmax -80vmax,
-    60vmax -30vmax,
-    10vmax 10vmax,
-    -30vmax -10vmax,
-    50vmax 50vmax;
-  background-repeat: no-repeat;
-  animation: 10s movement linear infinite;
-}
-
-body::after {
-  z-index: -10;
-  content: '';
-  display: block;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-@keyframes movement {
-
-  0%,
-  100% {
-    background-size:
-      130vmax 130vmax,
-      80vmax 80vmax,
-      90vmax 90vmax,
-      110vmax 110vmax,
-      90vmax 90vmax;
-    background-position:
-      -80vmax -80vmax,
-      60vmax -30vmax,
-      10vmax 10vmax,
-      -30vmax -10vmax,
-      50vmax 50vmax;
-  }
-
-  25% {
-    background-size:
-      100vmax 100vmax,
-      90vmax 90vmax,
-      100vmax 100vmax,
-      90vmax 90vmax,
-      60vmax 60vmax;
-    background-position:
-      -60vmax -90vmax,
-      50vmax -40vmax,
-      0vmax -20vmax,
-      -40vmax -20vmax,
-      40vmax 60vmax;
-  }
-
-  50% {
-    background-size:
-      80vmax 80vmax,
-      110vmax 110vmax,
-      80vmax 80vmax,
-      60vmax 60vmax,
-      80vmax 80vmax;
-    background-position:
-      -50vmax -70vmax,
-      40vmax -30vmax,
-      10vmax 0vmax,
-      20vmax 10vmax,
-      30vmax 70vmax;
-  }
-
-  75% {
-    background-size:
-      90vmax 90vmax,
-      90vmax 90vmax,
-      100vmax 100vmax,
-      90vmax 90vmax,
-      70vmax 70vmax;
-    background-position:
-      -50vmax -40vmax,
-      50vmax -30vmax,
-      20vmax 0vmax,
-      -10vmax 10vmax,
-      40vmax 60vmax;
-  }
 }
