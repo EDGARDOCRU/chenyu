@@ -96,6 +96,12 @@ const icons = [
   { name: "thepiratebay", path: "icon/thepiratebay.jpg" },
   { name: "千牛", path: "icon/千牛.png" },
   { name: "阿里1688", path: "icon/阿里1688.png" },
+  { name: "chenyu", path: "icon/chenyu.png" },
+  { name: "Namesilo", path: "icon/Namesilo.ico" },
+  { name: "Cloudflare", path: "icon/Cloudflare.ico" },
+  { name: "Serv00", path: "icon/Serv00.ico" },
+  { name: "MyLead", path: "icon/MyLead.jpeg" },
+  { name: "ZeroSSL", path: "icon/ZeroSSL.ico" },
 ];
 // 遍历图标占位符并加载对应图标
 icons.forEach(icon => {
@@ -111,7 +117,7 @@ icons.forEach(icon => {
               element.innerHTML = svgContent; // 将 SVG 插入到占位符中
           });
   } else {
-      // 动态加载 PNG  JPG  ICO 图标
+      // 动态加载 PNG  JPG  ICO JPEG 图标
       const img = document.createElement("img");
       img.src = icon.path;
       img.alt = icon.name;
