@@ -58,4 +58,65 @@ links.forEach(function (link) {
     animation: "scale",
   });
 });
-// ***搜索引擎选项联动输入提示***
+// ***动态加载多种格式的图标***
+// 图标路径映射表
+const icons = [
+  { name: "AList", path: "icon/AList.svg" },
+  { name: "Apple", path: "icon/Apple.svg" },
+  { name: "Google 翻译", path: "icon/Google 翻译.ico" },
+  { name: "Apple2", path: "icon/Apple2.svg" },
+  { name: "Aria2", path: "icon/Aria2.svg" },
+  { name: "百度识图", path: "icon/百度识图.svg" },
+  { name: "GitHub", path: "icon/GitHub.svg" },
+  { name: "bilibili", path: "icon/bilibili.ico" },
+  { name: "ChatGPT", path: "icon/ChatGPT.svg" },
+  { name: "YouTube", path: "icon/YouTube.png" },
+  { name: "豆瓣电影", path: "icon/豆瓣电影.ico" },
+  { name: "iconfont", path: "icon/iconfont.png" },
+  { name: "头条号", path: "icon/头条号.png" },
+  { name: "TikTok", path: "icon/TikTok.ico" },
+  { name: "西瓜创作平台", path: "icon/西瓜创作平台.ico" },
+  { name: "网易云音乐", path: "icon/网易云音乐.svg" },
+  { name: "PikPak", path: "icon/PikPak.svg" },
+  { name: "微信公众平台", path: "icon/微信公众平台.ico" },
+  { name: "Topbook", path: "icon/Topbook.png" },
+  { name: "Qwerty Learner", path: "icon/Qwerty Learner.svg" },
+  { name: "SMS-Activate", path: "icon/SMS-Activate.png" },
+  { name: "IconScout", path: "icon/IconScout.png" },
+  { name: "吾爱破解", path: "icon/吾爱破解.ico" },
+  { name: "网易BUFF", path: "icon/网易BUFF.png" },
+  { name: "iMyShare", path: "icon/iMyShare.ico" },
+  { name: "TikTok2", path: "icon/TikTok2.ico" },
+  { name: "Facebook", path: "icon/Facebook.png" },
+  { name: "Twitter", path: "icon/Twitter.svg" },
+  { name: "taobao", path: "icon/taobao.ico" },
+  { name: "jd", path: "icon/jd.svg" },
+  { name: "Futurepedia", path: "icon/Futurepedia.svg" },
+  { name: "BYRUTOR", path: "icon/BYRUTOR.png" },
+  { name: "thepiratebay", path: "icon/thepiratebay.jpg" },
+  { name: "千牛", path: "icon/千牛.png" },
+  { name: "阿里1688", path: "icon/阿里1688.png" },
+];
+// 遍历图标占位符并加载对应图标
+icons.forEach(icon => {
+  const element = document.querySelector(`[data-icon="${icon.name}"]`);
+  if (!element) return; // 如果找不到对应占位符，跳过
+
+  const ext = icon.path.split('.').pop(); // 获取文件扩展名
+  if (ext === "svg") {
+      // 动态加载 SVG 图标
+      fetch(icon.path)
+          .then(response => response.text())
+          .then(svgContent => {
+              element.innerHTML = svgContent; // 将 SVG 插入到占位符中
+          });
+  } else {
+      // 动态加载 PNG  JPG  ICO 图标
+      const img = document.createElement("img");
+      img.src = icon.path;
+      img.alt = icon.name;
+      img.width = 40;
+      img.height = 40;
+      element.appendChild(img); // 将图片插入到占位符中
+  }
+});

@@ -2,14 +2,14 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Chenyu Web</title>
     <script src="https://kit.fontawesome.com/b988687505.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
-    <link rel="stylesheet" href="1.css">
-    <link rel="shortcut icon" href="chenyu.png" type="image/png">
+    <link rel="stylesheet" href="1.css" />
+    <link rel="shortcut icon" href="chenyu.png" type="image/png" />
 </head>
 
 <body>
@@ -17,160 +17,165 @@
     <form id="search-form" target="_blank">
         <!-- 搜索引擎选项 -->
         <div class="radio-group">
-            <input type="radio" name="search-engine" value="https://www.google.com/search" onchange="changeAction()" id="google">
+            <input type="radio" name="search-engine" value="https://www.google.com/search" onchange="changeAction()" id="google" />
             <label for="google" class="hvr-bubble-bottom">Google</label>
-            <input type="radio" name="search-engine" value="https://www.baidu.com/s" onchange="changeAction()" id="baidu">
+            <input type="radio" name="search-engine" value="https://www.baidu.com/s" onchange="changeAction()" id="baidu" />
             <label for="baidu" class="hvr-bubble-bottom">Baidu</label>
-            <input type="radio" name="search-engine" value="https://www.bing.com/search" onchange="changeAction()" id="bing">
+            <input type="radio" name="search-engine" value="https://www.bing.com/search" onchange="changeAction()" id="bing" />
             <label for="bing" class="hvr-bubble-bottom">Bing</label>
         </div>
         <!-- 搜索输入框和提交按钮 -->
         <div class="input-group">
             <input type="text" name="q" autocomplete="off" placeholder="请输入搜索类容" />
-            <button type="submit" class="bn632-hover bn25"><i class="fas fa-search"></i></button>
+            <button type="submit" class="bn632-hover bn25">
+                <i class="fas fa-search"></i>
+            </button>
         </div>
     </form>
     <!-- 链接列表 -->
     <div id="links">
         <a class="links-box hvr-float-shadow" href="https://translate.google.com.hk/?hl=zh-CN" target="_blank">
-            <img src="icon\Google 翻译.ico" width="40" height="40">
+            <div class="icon" data-icon="Google 翻译"></div>
             <i content="Google 免费提供的这项服务可在简体中文和其他 100 多种语言之间即时翻译字词、短语和网页。">Google 翻译</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://graph.baidu.com/pcpage/index?tpl_from=pc" target="_blank">
-            <img src="icon\百度识图.svg">
+            <div class="icon" data-icon="百度识图"></div>
             <i content="百度图像搜索-领先的图像识别技术连接人与信息-为你搜寻所见">百度识图</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.github.com" target="_blank">
-            <img src="icon\GitHub.svg" width="40" height="40">
+            <div class="icon" data-icon="GitHub"></div>
             <i content="GitHub 是人们构建软件的地方。 超过 1 亿人使用 GitHub 发现、分叉和贡献超过 3.3 亿个项目。">GitHub</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.bilibili.com/" target="_blank">
-            <img src="icon\bilibili.ico" width="40" height="40">
+            <div class="icon" data-icon="bilibili"></div>
             <i content="哔哩哔哩（bilibili.com）是国内知名的视频弹幕网站，这里有及时的动漫新番，活跃的ACG氛围，有创意的Up主。大家可以在这里找到许多欢乐。">bilibili</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://chat.openai.com/chat/" target="_blank">
-            <img src="icon\ChatGPT.svg">
+            <div class="icon" data-icon="ChatGPT"></div>
             <i content="ChatGPT 是由 OpenAI 开发的一种人工智能语言模型，能够根据上下文和过去的对话生成类似人类的文本。">ChatGPT</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.youtube.com/" target="_blank">
-            <img src="icon\YouTube.png" width="40" height="40">
+            <div class="icon" data-icon="YouTube"></div>
             <i content="在 YouTube 上欣赏您喜爱的视频和音乐，上传原创内容，并与朋友、家人和全世界分享。">YouTube</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://movie.douban.com/" target="_blank">
-            <img src="icon\豆瓣电影.ico" style="width: 40px; height: 40px; transform: scale(0.96);">
+            <div class="icon" data-icon="豆瓣电影" transform: scale(0.96)></div>
             <i content="豆瓣电影提供最新的电影介绍及评论包括上映影片的影讯查询及购票服务。你可以记录想看、在看和看过的电影电视剧，顺便打分、写影评。根据你的口味，豆瓣电影会推荐好电影给你。">豆瓣电影</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.iconfont.cn/" target="_blank">
-            <img src="icon\iconfont.png" width="40" height="40">
+            <div class="icon" data-icon="iconfont"></div>
             <i content="iconfont-国内功能很强大且图标内容很丰富的矢量图标库，提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造，设计和前端开发的便捷工具">iconfont</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://mp.toutiao.com/" target="_blank">
-            <img src="icon\头条号.png" width="40" height="40">
+            <div class="icon" data-icon="头条号"></div>
             <i content="头条号是今日头条推出的开放的内容创作与分发平台，基于今日头条革命性的推荐引擎，实现媒体、企业、政府等机构与个人的内容创作、发布与精准分发。成功申请并入驻头条号平台后，用户可以创作、发布包括文字、图片、视频等多种形式的内容，经过今日头条推荐引擎，向数亿今日头条用户展示。目前，头条号所发布内容产生的阅读量占今日头条阅读总量的90%左右。">头条号</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://creator.douyin.com/" target="_blank">
-            <img src="icon\TikTok.ico" width="40" height="40">
+            <div class="icon" data-icon="TikTok"></div>
             <i content="抖音创作服务平台是抖音创作者的专属服务平台，支持用户作为创作者和管理机构两种登陆方式，并通过提供授权管理、内容管理、互动管理及数据管理等服务助力抖音用户高效运营！">抖音创作服务平台</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://studio.ixigua.com/" target="_blank">
-            <img src="icon\西瓜创作平台.ico" width="40" height="40">
+            <div class="icon" data-icon="西瓜创作平台"></div>
             <i content="西瓜创作平台是西瓜创作者的专属创作平台，支持用户发布西瓜视频，并通过提供发布视频、内容管理、数据分析、评论管理、收益分析、创作激励、创作课程、消息管理等服务助力西瓜用户高效运营和创作！">西瓜创作平台</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://music.163.com/#/creatorcenter?module=creatorcenter" target="_blank">
-            <img src="icon\网易云音乐.svg">
+            <div class="icon" data-icon="网易云音乐"></div>
             <i content="网易云音乐是一款专注于发现与分享的音乐产品，依托专业音乐人、DJ、好友推荐及社交功能，为用户打造全新的音乐生活。">网易云音乐</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://mypikpak.com/drive/all" target="_blank">
-            <img src="icon\PikPak.svg">
+            <div class="icon" data-icon="PikPak"></div>
             <i content="PikPak是一款可以高速保存您喜欢的文件，并支持随时在线查看和播放的私有云盘。 亮点包括功能齐全的云下载，高达 10T 的大空间，闪电般的快速保存和一键播放，通过 Telegram 上的 bot 方便地保存任何文件。">PikPak</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://mp.weixin.qq.com/" target="_blank">
-            <img src="icon\微信公众平台.ico" width="40" height="40">
+            <div class="icon" data-icon="微信公众平台"></div>
             <i content="微信公众平台,微信公众平台官方网站,公众号注册,微信公众号注册,微信订阅号注册,微信公众号申请,微信服务号申请,微信订阅号申请,微信企业号申请,微信服务号注册,微信企业号注册,订阅号注册,公众号申请,服务号申请,订阅号申请,企业号申请,服务号注册,企业号注册,微信">微信公众平台</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://topbook.cc/" target="_blank">
-            <img src="icon\Topbook.png" width="40" height="40">
+            <div class="icon" data-icon="Topbook"></div>
             <i content="Topbook是一本持续更新的视频书，致力于让现代人摆脱资讯的控制，在避无可避的科技生活中，让工具回归工具，让每个人成为自己。">Topbook</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://qwerty.kaiyi.cool/" target="_blank">
-            <img src="icon\Qwerty Learner.svg">
+            <div class="icon" data-icon="Qwerty Learner"></div>
             <i content="Qwerty Learner / 为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件 / Words learning and English muscle memory training software designed for keyboard workers">Qwerty Learner</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://sms-activate.org/getNumber" target="_blank">
-            <img src="icon\SMS-Activate.png" width="40" height="40">
+            <div class="icon" data-icon="SMS-Activate"></div>
             <i content="获取虚拟手机号码。短期手机号码。手机短信激活服务">SMS-Activate</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://iconscout.com/" target="_blank">
-            <img src="icon\IconScout.png" width="40" height="40">
+            <div class="icon" data-icon="IconScout"></div>
             <i content="访问超过 610 万个免费或付费矢量图标、插图、3D 插图和适用于任何设计的 Lottie 动画。 提供 PNG、SVG、GIF、EPS、JSON 等格式。">IconScout</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.52pojie.cn/" target="_blank">
-            <img src="icon\吾爱破解.ico" width="40" height="40">
+            <div class="icon" data-icon="吾爱破解"></div>
             <i content="吾爱破解,破解论坛,破解软件,软件论坛,病毒分析,脱壳破解,安卓破解,加密解密,软件安全">吾爱破解</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://buff.163.com/market/csgo#tab=selling&page_num=1" target="_blank">
-            <img src="icon\网易BUFF.png" width="40" height="40">
+            <div class="icon" data-icon="网易BUFF"></div>
             <i content="网易BUFF饰品交易平台,为全球玩家提供专业安全的CS:GO饰品交易服务,买CS:GO饰品就上网易BUFF">网易BUFF</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://imyshare.com/" target="_blank">
-            <img src="icon\iMyShare.ico" width="40" height="40">
+            <div class="icon" data-icon="iMyShare"></div>
             <i content="iMyShare,网址导航,资源分享,资源搜索,网盘搜索,免费视频网站,实用软件,软件资源,实用工具,下载工具,视频下载,免费音乐下载,电子书下载网站,办公素材,设计素材,有趣的网站,免费漫画网站,免费动漫">iMyShare</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.tiktok.com/foryou" target="_blank">
-            <img src="icon\TikTok.ico" width="40" height="40">
+            <div class="icon" data-icon="TikTok2"></div>
             <i content="TikTok 网罗众多精彩内容。快来加入数百万观众之列，在 TikTok 上探索优质内容与创作者。">TikTok</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.facebook.com/" target="_blank">
-            <img src="icon\Facebook.png" height="40" width="40">
+            <div class="icon" data-icon="Facebook"></div>
             <i content="登录 Facebook，与好友、家人和认识的人分享和建立联系。">Facebook</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://twitter.com/" target="_blank">
-            <img src="icon\Twitter.svg">
+            <div class="icon" data-icon="Twitter"></div>
             <i content="Twitter 上的最新故事，通过推文讲述。">Twitter</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.taobao.com/" target="_blank">
-            <img src="icon\taobao.ico" style="width: 40px; height: 40px; transform: scale(1.06);">
+            <div class="icon" data-icon="taobao" transform: scale(1.06)></div>
             <i content="淘宝网 - 亚洲较大的网上交易平台，提供各类服饰、美容、家居、数码、话费/点卡充值… 数亿优质商品，同时提供担保交易(先收货后付款)等安全交易保障服务，并由商家提供退货承诺、破损补寄等消费者保障服务，让你安心享受网上购物乐趣！">淘宝网</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.jd.com/" target="_blank">
-            <img src="icon\jd.svg">
+            <div class="icon" data-icon="jd"></div>
             <i content="京东JD.COM-专业的综合网上购物商城，为您提供正品低价的购物选择、优质便捷的服务体验。商品来自全球数十万品牌商家，囊括家电、手机、电脑、服装、居家、母婴、美妆、个护、食品、生鲜等丰富品类，满足各种购物需求。">京东</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.apple.com.cn/" target="_blank">
-            <img src="icon\Apple.svg">
+            <div class="icon" data-icon="Apple2"></div>
             <i content=" 探索 Apple 的创新世界，选购各式 iPhone、iPad、Apple Watch 和 Mac，浏览各类配件、娱乐产品，并获得相关产品的专家服务支持。">Apple(中国大陆)</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.futurepedia.io/" target="_blank">
-            <img src="icon\Futurepedia.svg">
+            <div class="icon" data-icon="Futurepedia"></div>
             <i content="未来百科 - 最大的人工智能工具目录 |家">Futurepedia</i>
         </a>
         <a class="links-box hvr-float-shadow" href="http://127.0.0.1:5244/" target="_blank">
-            <img src="icon\AList.svg" height="40" width="40">
+            <div class="icon" data-icon="AList"></div>
             <i content="一个支持多种存储的文件列表程序，使用 Gin 和 Solidjs">AList</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://byrut.org/" target="_blank">
-            <img src="icon\BYRUTOR.png" height="40" width="40">
+            <div class="icon" data-icon="BYRUTOR"></div>
             <i content="由俄罗斯黑客破解的PC游戏资源发布网站">BYRUTOR</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.icloud.com.cn/" target="_blank">
-            <img src="icon\Apple.svg"> <i content="登录 iCloud 以访问你的照片、视频、文稿、备忘录、通讯录及更多内容。要开始使用 Apple 服务，请使用你的 Apple ID 或创建新的帐户。">iCloud</i>
+            <div class="icon" data-icon="Apple"></div>
+            <i content="登录 iCloud 以访问你的照片、视频、文稿、备忘录、通讯录及更多内容。要开始使用 Apple 服务，请使用你的 Apple ID 或创建新的帐户。">iCloud</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://ui.aria2e.com" target="_blank">
-            <img src="icon\Aria2.svg">
+            <div class="icon" data-icon="Aria2"></div>
             <i content="Aria2是一个轻量级的多协议和多源命令行下载实用程序。它支持 HTTP/HTTPS、FTP、SFTP、BitTorrent 和 Metalink。aria2 可以通过内置的 JSON-RPC 和 XML-RPC 接口进行操作。">Aria2</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://thepiratebay.org/index.html" target="_blank">
-            <img src="icon\thepiratebay.jpg" height="40" width="40">
+            <div class="icon" data-icon="thepiratebay"></div>
             <i content="下载音乐、电影、游戏、软件！海盗湾 - 银河系最具弹性的 BitTorrent 网站">thepiratebay</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://myseller.taobao.com" target="_blank">
-            <img src="icon\千牛.png" height="40" width="40">
+            <div class="icon" data-icon="千牛"></div>
             <i content="千牛工作台，淘宝天猫商家后台，一站式店铺管理工作台，0元开店，千万商家都在用">千牛商家工作平台</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.1688.com/" target="_blank">
-            <img src="icon\阿里1688.png" height="40" width="40">
+            <div class="icon" data-icon="阿里1688"></div>
             <i content="阿里巴巴，采购批发，1688，行业门户，网上贸易，b2b，电子商务，内贸，外贸，批发，行业资讯，网上贸易，网上交易，交易市场，在线交易，买卖信息，贸易机会，商业信息，供求信息，采购，求购信息，供应信息，加工合作，代理，商机，行业资讯，商务服务，商务网，商人社区，网商">阿里1688</i>
         </a>
     </div>
     <script src="1.js"></script>
 </body>
+
+</html>
