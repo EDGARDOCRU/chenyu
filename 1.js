@@ -102,6 +102,10 @@ const icons = [
   { name: "Serv00", path: "icon/Serv00.ico" },
   { name: "MyLead", path: "icon/MyLead.jpeg" },
   { name: "ZeroSSL", path: "icon/ZeroSSL.ico" },
+  { name: "Google", path: "icon/Google.svg" },
+  { name: "Baidu", path: "icon/Baidu.svg" },
+  { name: "Bing", path: "icon/Bing.svg" },
+
 ];
 // 遍历图标占位符并加载对应图标
 icons.forEach(icon => {

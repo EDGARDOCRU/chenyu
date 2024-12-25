@@ -15,32 +15,75 @@ body {
 }
 
 #search-form input {
-    width: 35pc;
+    width: 45pc;
+}
+
+.italic {
+    font-style: normal;
+    /* 移除斜体 */
+    font-size: 0.8pc;
+}
+
+/* 默认状态 */
+.fangda {
+    transition: transform 0.2s ease;
+    /* 平滑过渡 */
+}
+
+/* 鼠标悬停时放大 */
+.fangda:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+    transform-origin: bottom;
+    /* 可以尝试 top、left、right、bottom 或 center */
+}
+
+/* 被选中时放大 */
+input:checked+.fangda {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+    transform-origin: bottom;
+    /* 可以尝试 top、left、right、bottom 或 center */
+}
+
+.icon-color {
+    transition: transform 0.2s ease, filter 0.2s ease;
+    /* 平滑过渡 */
+    filter: grayscale(100%) sepia(100%) hue-rotate(180deg);
+    /* 给图片添加颜色效果 */
+}
+
+/* 选中时取消颜色（恢复原始颜色） */
+input:checked+label .icon-color {
+    filter: none;
+    /* 取消颜色效果 */
 }
 
 #search-form input[type="text"] {
     font-size: 1.35pc;
-    border: none;
+    border: no1e;
     user-select: none;
-    background-color: transparent;
-    /* 设置输入框的背景色为透明 */
     border: none;
+    background-color: transparent;
     /* 取消输入框的边框 */
     outline: none;
     /* 取消输入框获得焦点时的外边框 */
     position: relative;
+    padding: 5px 0px 5px 20px;
+    border-radius: 8px 0 0 8px;
+    /* 左上角和左下角为圆角，右上角和右下角为直角 */
 }
 
 /*搜索输入框和提交按钮大小*/
 .input-group {
-    width: 600px;
+    background-color: rgb(225, 225, 225);
+    /* 内部背景变为白色 */
+    width: 700px;
     /* 设置一个固定的宽度 */
+    border-radius: 8px;
+    /* 设置按钮的圆角（可选） */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-}
-
-/*占位符点击后字体颜色样式*/
-input[type="text"]:focus::placeholder {
-    color: black;
 }
 
 #search-form {
@@ -57,7 +100,7 @@ input[type="text"]:focus::placeholder {
 }
 
 .radio-group label {
-    margin: 0 10px;
+    margin: 0 25px 10px 25px;
 }
 
 .search-bar {
@@ -74,80 +117,47 @@ input[type="text"]:focus::placeholder {
     display: none;
 }
 
+button {
+    border: none;
+    /* 移除默认边框 */
+    outline: none;
+    /* 移除聚焦时的外边框 */
+    background-color: transparent;
+    /* 设置文字颜色 */
+    padding: 15px 20px;
+    /* 设置按钮内边距 */
+    border-radius: 0 8px 8px 0;
+    /* 设置按钮的圆角（可选） */
+    cursor: pointer;
+    /* 鼠标悬停时显示为手型指针 */
+}
+
+.custom-icon {
+    font-size: 20px;
+    /* 设置图标大小 */
+    color: #777777;
+}
+
+/* 鼠标悬停或点击时的样式 */
+.input-group:hover,
+.input-group:focus-within {
+    background-color: #ffffff;
+    /* 内部背景变为白色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* 四面均匀的阴影 */
+    border-radius: 8px;
+}
+
 /*搜索引擎选项按钮样式*/
 .hvr-bubble-bottom {
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
-    position: relative
-}
-
-.hvr-bubble-bottom:before {
-    pointer-events: none;
-    position: absolute;
-    content: '';
-    border-style: solid;
-    left: calc(50% - 8px);
-    bottom: 0;
-    border-width: 7px 7px 0;
-    border-color: #383b3f transparent transparent;
-    display: none;
-    /* 默认隐藏 */
-}
-
-/* 选中时的样式 */
-input:checked+label.hvr-bubble-bottom:before {
-    display: block;
-    transform: translateY(10px);
-}
-
-/*搜索图标、放大镜*/
-.bn632-hover {
-    width: 70px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    height: 40px;
-    text-align: center;
-    border: none;
-    background-size: 300% 100%;
-    border-radius: 5px;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
-
-.bn632-hover:hover {
-    background-position: 100% 0;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
-
-.bn632-hover:focus {
-    outline: none;
-}
-
-.bn632-hover.bn25 {
-    background-image: linear-gradient(to right, #FF6347, #FF8C00, #FFD700, #3CB371);
-}
-
-.input-group-button.dark {
-    --background: #2f3545;
-    --shadow: 0 2px 8px -1px rgba(21, 25, 36, 0.32);
-    --shadow-hover: 0 4px 20px -2px rgba(21, 25, 36, 0.5);
-}
-
-.input-group-button.white {
-    --background: #fff;
-    --text: #275efe;
-    --shadow: 0 2px 8px -1px rgba(18, 22, 33, 0.04);
-    --shadow-hover: 0 4px 20px -2px rgba(18, 22, 33, 0.12);
-}
-
-.input-group-fast {
-    --duration: 0.32s;
+    display: flex;
+    /* 设置 label 为 flex 布局 */
+    flex-direction: column;
+    /* 使内容垂直排列 */
+    align-items: center;
+    /* 确保图标和文字在水平方向居中 */
+    justify-content: center;
+    /* 可选，垂直方向也居中对齐 */
 }
 
 /*链接列表样式*/

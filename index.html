@@ -14,21 +14,30 @@
 
 <body>
     <!-- 搜索表单 -->
-    <form id="search-form" target="_blank">
+    <form id="search-form" target="_blank" style="transform: scale(0.8)">
         <!-- 搜索引擎选项 -->
         <div class="radio-group">
             <input type="radio" name="search-engine" value="https://www.google.com/search" onchange="changeAction()" id="google" />
-            <label for="google" class="hvr-bubble-bottom">Google</label>
+            <label for="google" class="hvr-bubble-bottom fangda">
+                <div class="icon icon-color" data-icon="Google"></div>
+                <i class="italic">Google</i>
+            </label>
             <input type="radio" name="search-engine" value="https://www.baidu.com/s" onchange="changeAction()" id="baidu" />
-            <label for="baidu" class="hvr-bubble-bottom">Baidu</label>
+            <label for="baidu" class="hvr-bubble-bottom fangda">
+                <div class="icon icon-color" data-icon="Baidu"></div>
+                <i class="italic">Baidu</i>
+            </label>
             <input type="radio" name="search-engine" value="https://www.bing.com/search" onchange="changeAction()" id="bing" />
-            <label for="bing" class="hvr-bubble-bottom">Bing</label>
+            <label for="bing" class="hvr-bubble-bottom fangda">
+                <div class="icon icon-color" data-icon="Bing" style="transform: scale(1.2)"></div>
+                <i class="italic">Bing</i>
+            </label>
         </div>
         <!-- 搜索输入框和提交按钮 -->
         <div class="input-group">
-            <input type="text" name="q" autocomplete="off" placeholder="请输入搜索类容" />
-            <button type="submit" class="bn632-hover bn25">
-                <i class="fas fa-search"></i>
+            <input type="text" name="q" autocomplete="off" placeholder="Search" />
+            <button type="submit">
+                <i class="fas fa-search custom-icon"></i>
             </button>
         </div>
     </form>
@@ -59,7 +68,7 @@
             <i content="在 YouTube 上欣赏您喜爱的视频和音乐，上传原创内容，并与朋友、家人和全世界分享。">YouTube</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://movie.douban.com/" target="_blank">
-            <div class="icon" data-icon="豆瓣电影" transform: scale(0.96)></div>
+            <div class="icon" data-icon="豆瓣电影"></div>
             <i content="豆瓣电影提供最新的电影介绍及评论包括上映影片的影讯查询及购票服务。你可以记录想看、在看和看过的电影电视剧，顺便打分、写影评。根据你的口味，豆瓣电影会推荐好电影给你。">豆瓣电影</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.iconfont.cn/" target="_blank">
@@ -131,7 +140,7 @@
             <i content="Twitter 上的最新故事，通过推文讲述。">Twitter</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.taobao.com/" target="_blank">
-            <div class="icon" data-icon="taobao" transform: scale(1.06)></div>
+            <div class="icon" data-icon="taobao" style="transform: scale(1.06)"></div>
             <i content="淘宝网 - 亚洲较大的网上交易平台，提供各类服饰、美容、家居、数码、话费/点卡充值… 数亿优质商品，同时提供担保交易(先收货后付款)等安全交易保障服务，并由商家提供退货承诺、破损补寄等消费者保障服务，让你安心享受网上购物乐趣！">淘宝网</i>
         </a>
         <a class="links-box hvr-float-shadow" href="https://www.jd.com/" target="_blank">
