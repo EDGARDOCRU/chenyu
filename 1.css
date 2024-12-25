@@ -36,6 +36,8 @@ body {
     transition: transform 0.2s ease;
     transform-origin: bottom;
     /* 可以尝试 top、left、right、bottom 或 center */
+    cursor: pointer;
+    /* 鼠标悬停时显示为手型指针 */
 }
 
 /* 被选中时放大 */
