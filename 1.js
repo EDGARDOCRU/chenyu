@@ -1,42 +1,60 @@
-//***实现搜索引擎切换***
-// 当搜索引擎选项变化时，动态更新表单的 action 和查询参数
+//*** 实现搜索引擎切换 ***
+// 当页面加载时，默认选择百度搜索，并动态更新表单的 action 和查询参数
 window.onload = function () {
   var baiduOption = document.getElementById("baidu");
-  baiduOption.checked = true;
-  changeAction();
+  if (baiduOption) {
+    baiduOption.checked = true; // 默认选中百度
+    changeAction();
+  }
 };
+
+// 动态更新表单的 action 和查询参数
 function changeAction() {
   var radios = document.getElementsByName("search-engine");
   var form = document.getElementById("search-form");
+  if (!form) {
+    console.error("表单元素不存在，请检查 HTML 结构！");
+    return;
+  }
+
   for (var i = 0; i < radios.length; i++) {
     if (radios[i].checked) {
-      form.action = radios[i].value;
-      // 当选择百度搜索时，更改查询参数名和编码方式
+      form.action = radios[i].value; // 设置表单的 action
+
+      // 获取搜索输入框
+      var queryInput = form.querySelector('input[type="text"]');
+      if (!queryInput) {
+        console.error("搜索输入框未找到，请检查 HTML 结构！");
+        return;
+      }
+
+      // 根据搜索引擎调整查询参数名
       if (radios[i].value === "https://www.baidu.com/s") {
-        form.querySelector('input[name="q"]').name = "wd";
-        form.querySelector('input[name="ie"]').value = "utf-8";
+        queryInput.name = "wd"; // 百度的查询参数名
       } else {
-        form.querySelector('input[name="wd"]').name = "q";
-        form.querySelector('input[name="ie"]').value = "";
+        queryInput.name = "q"; // Google 和 Bing 的查询参数名
       }
       break;
     }
   }
 }
-// 获取表单元素
+
+// 获取表单和相关元素
 var form = document.getElementById("search-form");
-var searchInput = form.querySelector('input[name="q"]');
-var searchRadios = form.querySelectorAll('input[name="search-engine"]');
+if (form) {
+  var searchInput = form.querySelector('input[type="text"]');
+  var searchRadios = form.querySelectorAll('input[name="search-engine"]');
 
-// 监听表单提交事件
-form.addEventListener("submit", function (event) {
-  // 如果搜索内容为空或搜索引擎选项未选中，则阻止表单提交
-  if (!searchInput.value || !checkRadioSelected(searchRadios)) {
-    event.preventDefault();
-  }
-});
+  // 监听表单提交事件
+  form.addEventListener("submit", function (event) {
+    // 如果搜索框为空，阻止表单提交，但不提示
+    if (!searchInput || !searchInput.value.trim()) {
+      event.preventDefault(); // 阻止提交
+    }
+  });
+}
 
-// 辅助函数：检查单选框是否有选中项
+// 辅助函数：检查是否有选中的搜索引擎（备用，可扩展）
 function checkRadioSelected(radios) {
   for (var i = 0; i < radios.length; i++) {
     if (radios[i].checked) {
@@ -105,28 +123,27 @@ const icons = [
   { name: "Google", path: "icon/Google.svg" },
   { name: "Baidu", path: "icon/Baidu.svg" },
   { name: "Bing", path: "icon/Bing.svg" },
-
 ];
 // 遍历图标占位符并加载对应图标
-icons.forEach(icon => {
+icons.forEach((icon) => {
   const element = document.querySelector(`[data-icon="${icon.name}"]`);
   if (!element) return; // 如果找不到对应占位符，跳过
 
-  const ext = icon.path.split('.').pop(); // 获取文件扩展名
+  const ext = icon.path.split(".").pop(); // 获取文件扩展名
   if (ext === "svg") {
-      // 动态加载 SVG 图标
-      fetch(icon.path)
-          .then(response => response.text())
-          .then(svgContent => {
-              element.innerHTML = svgContent; // 将 SVG 插入到占位符中
-          });
+    // 动态加载 SVG 图标
+    fetch(icon.path)
+      .then((response) => response.text())
+      .then((svgContent) => {
+        element.innerHTML = svgContent; // 将 SVG 插入到占位符中
+      });
   } else {
-      // 动态加载 PNG  JPG  ICO JPEG 图标
-      const img = document.createElement("img");
-      img.src = icon.path;
-      img.alt = icon.name;
-      img.width = 40;
-      img.height = 40;
-      element.appendChild(img); // 将图片插入到占位符中
+    // 动态加载 PNG  JPG  ICO JPEG 图标
+    const img = document.createElement("img");
+    img.src = icon.path;
+    img.alt = icon.name;
+    img.width = 40;
+    img.height = 40;
+    element.appendChild(img); // 将图片插入到占位符中
   }
 });
