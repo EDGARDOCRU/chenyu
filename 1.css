@@ -103,7 +103,7 @@ input:checked+label .icon-color {
 
 .radio-group label {
     display: inline-block; /* 让 label 成为可点击区域 */
-    padding: 0 20px 0 30px;    /* 增加内边距，扩大选择面积 */
+    padding: 0 20px 0 20px;    /* 增加内边距，扩大选择面积 */
 }
 
 .search-bar {
