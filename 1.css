@@ -21,7 +21,7 @@ body {
 .italic {
     font-style: normal;
     /* 移除斜体 */
-    font-size: 0.8pc;
+    font-size: 0.7pc;
 }
 
 /* 默认状态 */
@@ -92,7 +92,8 @@ input:checked+label .icon-color {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* 整组内容居中 */
+    text-align: center;
+    /* 整组内容居中 */
 }
 
 .radio-group {
