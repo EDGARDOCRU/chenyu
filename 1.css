@@ -92,6 +92,7 @@ input:checked+label .icon-color {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center; /* 整组内容居中 */
 }
 
 .radio-group {
@@ -102,8 +103,10 @@ input:checked+label .icon-color {
 }
 
 .radio-group label {
-    display: inline-block; /* 让 label 成为可点击区域 */
-    padding: 0 20px 0 20px;    /* 增加内边距，扩大选择面积 */
+    display: inline-block;
+    /* 让 label 成为可点击区域 */
+    padding: 0 23px 0 23px;
+    /* 增加内边距，扩大选择面积 */
 }
 
 .search-bar {
