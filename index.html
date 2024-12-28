@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8" />
     <title>Chenyu Web</title>
-    <script src="https://kit.fontawesome.com/b988687505.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
@@ -18,17 +17,17 @@
         <!-- 搜索引擎选项 -->
         <div class="radio-group">
             <input type="radio" name="search-engine" value="https://www.google.com/search" onchange="changeAction()" id="google" />
-            <label for="google" class="hvr-bubble-bottom fangda">
+            <label for="google" class="hvr-bubble-bottom fangda search-option">
                 <div class="icon icon-color" data-icon="Google"></div>
                 <i class="italic">Google</i>
             </label>
             <input type="radio" name="search-engine" value="https://www.baidu.com/s" onchange="changeAction()" id="baidu" />
-            <label for="baidu" class="hvr-bubble-bottom fangda">
+            <label for="baidu" class="hvr-bubble-bottom fangda search-option">
                 <div class="icon icon-color" data-icon="Baidu"></div>
                 <i class="italic">Baidu</i>
             </label>
             <input type="radio" name="search-engine" value="https://www.bing.com/search" onchange="changeAction()" id="bing" />
-            <label for="bing" class="hvr-bubble-bottom fangda">
+            <label for="bing" class="hvr-bubble-bottom fangda search-option">
                 <div class="icon icon-color" data-icon="Bing" style="transform: scale(1.2)"></div>
                 <i class="italic">Bing</i>
             </label>
@@ -37,7 +36,7 @@
         <div class="input-group">
             <input type="text" name="q" autocomplete="off" placeholder="Search" />
             <button type="submit">
-                <i class="fas fa-search custom-icon"></i>
+                <div class="icon custom-icon" data-icon="search"></div>
             </button>
         </div>
     </form>

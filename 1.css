@@ -131,7 +131,7 @@ button {
     /* 移除聚焦时的外边框 */
     background-color: transparent;
     /* 设置文字颜色 */
-    padding: 15px 20px;
+    padding: 5px 12px;
     /* 设置按钮内边距 */
     border-radius: 0 8px 8px 0;
     /* 设置按钮的圆角（可选） */
@@ -140,9 +140,9 @@ button {
 }
 
 .custom-icon {
-    font-size: 20px;
-    /* 设置图标大小 */
     color: #777777;
+    transform: scale(0.6)
+        /* 设置图标大小 */
 }
 
 /* 鼠标悬停或点击时的样式 */
@@ -172,7 +172,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     max-width: 1680px;
-    margin: 30px auto;
+    margin: 15px auto;
     justify-content: flex-start;
     user-select: none;
 }

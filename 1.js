@@ -123,6 +123,7 @@ const icons = [
   { name: "Google", path: "icon/Google.svg" },
   { name: "Baidu", path: "icon/Baidu.svg" },
   { name: "Bing", path: "icon/Bing.svg" },
+  { name: "search", path: "icon/search.svg" },
 ];
 // 遍历图标占位符并加载对应图标
 icons.forEach((icon) => {
