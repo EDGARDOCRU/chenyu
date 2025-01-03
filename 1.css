@@ -175,6 +175,7 @@ button {
     margin: 15px auto;
     justify-content: flex-start;
     user-select: none;
+    align-items: center; /* 垂直居中 */
 }
 
 #links>* {

@@ -124,6 +124,9 @@ const icons = [
   { name: "Baidu", path: "icon/Baidu.svg" },
   { name: "Bing", path: "icon/Bing.svg" },
   { name: "search", path: "icon/search.svg" },
+  { name: "Google AI Studio", path: "icon/Google AI Studio.svg" },
+  { name: "922 S5 Proxy", path: "icon/922 S5 Proxy.ico" },
+  { name: "Outlook", path: "icon/Outlook.ico" },
 ];
 // 遍历图标占位符并加载对应图标
 icons.forEach((icon) => {
