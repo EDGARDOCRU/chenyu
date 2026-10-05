@@ -130,6 +130,7 @@ const icons = [
   { name: "Gemini", path: "icon/Gemini.png" },
   { name: "Grok", path: "icon/Grok.ico" },
   { name: "Claude", path: "icon/Claude.ico" },
+  { name: "百度地图", path: "icon/百度地图.ico" },
 ];
 // 遍历图标占位符并加载对应图标
 icons.forEach((icon) => {
