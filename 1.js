@@ -128,6 +128,7 @@ const icons = [
   { name: "922 S5 Proxy", path: "icon/922 S5 Proxy.ico" },
   { name: "Outlook", path: "icon/Outlook.ico" },
   { name: "Gemini", path: "icon/Gemini.png" },
+  { name: "Grok", path: "icon/Grok.ico" },
 ];
 // 遍历图标占位符并加载对应图标
 icons.forEach((icon) => {
